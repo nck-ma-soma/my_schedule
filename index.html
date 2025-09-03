@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-08-30 横浜「ラーメン → ボルダリング → ラーメン」確定プラン</title>
+    
+    <!-- 検索エンジン除外設定 -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- PWA Manifest（プライベート設定） -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Travel Schedule">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiMzNDk4ZGIiLz4KPHN2ZyB4PSI0OCIgeT0iNDgiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiI+CjxwYXRoIGQ9Ik00OCAyNEMyNCAxMiAyNCAzNiA0OCA0OEw4NCA0OFY4NEw0OCA4NFY1MkwxMiA1MkMxMiA2MCAyNCA2MCA0OCA2MFY4NEgxMlY5NkgxMzJWODRIOTZWNjBIMTMyVjQ4SDk2VjI0SDQ4WiIgZmlsbD0iI2ZmZmZmZiIvPgo8L3N2Zz4KPC9zdmc+">
+    
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --text-color: #2c3e50;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --font-size-sm: 0.875rem;
+            --font-size-md: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.5rem;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Yu Gothic UI', 'Hiragino Sans', 'Meiryo UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .header .date-info {
+            font-size: var(--font-size-md);
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* 天気予報セクション */
+        .weather-section {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .weather-section h2 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
+
+        .weather-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .weather-item {
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-sm);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .weather-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .weather-time {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .weather-icon {
+            font-size: 1.5rem;
+            margin: 4px 0;
+        }
+
+        .weather-temp {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 2px;
+        }
+
+        .weather-desc {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+        }
+
+        .weather-loading {
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            padding: var(--spacing-md);
+        }
+
+        .weather-error {
+            text-align: center;
+            color: var(--accent-color);
+            padding: var(--spacing-md);
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: var(--border-radius);
+        }
+
+        /* Timeline container */
+        .timeline {
+            position: relative;
+            max-width: 100%;
+        }
+
+        /* Timeline line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            width: 3px;
+            height: 100%;
+            background: var(--secondary-color);
+            z-index: 1;
+        }
+
+        /* Timeline item */
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-lg);
+            padding-left: 5rem;
+        }
+
+        /* Timeline marker */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            border: 4px solid var(--card-background);
+            z-index: 2;
+        }
+
+        /* Event markers */
+        .timeline-item.event::before {
+            background: var(--accent-color);
+        }
+
+        .timeline-item.food::before {
+            background: var(--success-color);
+        }
+
+        .timeline-item.transport::before {
+            background: var(--warning-color);
+        }
+
+        /* Timeline card */
+        .timeline-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: var(--spacing-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Time display */
+        .time {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .time-range {
+            background: var(--secondary-color);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .time-single {
+            background: var(--text-muted);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Activity title */
+        .activity {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .activity.event {
+            color: var(--accent-color);
+        }
+
+        .activity .location {
+            font-size: var(--font-size-md);
+            font-weight: 500;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Duration badge */
+        .duration {
+            display: inline-block;
+            background: var(--warning-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-left: var(--spacing-sm);
+        }
+
+        /* Description */
+        .description {
+            font-size: var(--font-size-md);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Notes section */
+        .notes {
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-size: var(--font-size-sm);
+            color: var(--text-color);
+        }
+
+        .notes strong {
+            color: var(--accent-color);
+        }
+
+        /* Links */
+        .links {
+            margin-top: var(--spacing-sm);
+        }
+
+        .link {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: var(--font-size-sm);
+            margin: 2px 4px 2px 0;
+            transition: background-color 0.2s ease;
+        }
+
+        .link:hover {
+            background: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .link:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Highlight important information */
+        .highlight {
+            background: rgba(231, 76, 60, 0.1);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        /* Summary section */
+        .summary {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .summary h2 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .summary-item {
+            text-align: center;
+            padding: var(--spacing-sm);
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+        }
+
+        .summary-item .label {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .summary-item .value {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* イベント別天気表示 */
+        .event-weather {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .event-weather .weather-icon {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .event-weather .weather-info {
+            flex: 1;
+            font-size: var(--font-size-sm);
+        }
+
+        .event-weather .weather-temp {
+            font-size: var(--font-size-md);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--spacing-md);
+            }
+
+            .header {
+                padding: var(--spacing-md);
+            }
+
+            .header h1 {
+                font-size: var(--font-size-lg);
+            }
+
+            /* Remove timeline line and markers on mobile */
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-item {
+                padding-left: 0;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .timeline-item::before {
+                display: none;
+            }
+
+            .activity {
+                font-size: var(--font-size-md);
+            }
+
+            .description {
+                font-size: var(--font-size-sm);
+            }
+
+            .link {
+                display: block;
+                margin: 4px 0;
+                text-align: center;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .weather-container {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .timeline::before {
+                background: #000 !important;
+            }
+            
+            .timeline-item::before {
+                background: #000 !important;
+            }
+            
+            .timeline-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+            }
+            
+            .link {
+                background: none !important;
+                color: var(--primary-color) !important;
+                border: 1px solid var(--primary-color);
+            }
+        }
+
+        /* Focus styles for accessibility */
+        .timeline-card:focus-within {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header" role="banner">
+            <h1>横浜「ラーメン → ボルダリング → ラーメン」確定プラン</h1>
+            <p>白楽末廣家・B-PUMPボルダリング・新杉田杉田家・ランタンナイト・花火（オプション）</p>
+            <div class="date-info">
+                <time datetime="2025-08-30">2025年8月30日（土曜日）</time>
+            </div>
+        </header>
+
+        <section class="summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">📊 一日の概要</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">出発時刻</div>
+                    <div class="value">12:00</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">総所要時間</div>
+                    <div class="value">約8時間</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">主要イベント</div>
+                    <div class="value">8件</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">交通費概算</div>
+                    <div class="value">約1,200円</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-section" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">🌤️ 当日の天気予報</h2>
+            <div id="weatherContainer" class="weather-container">
+                <div class="weather-loading">天気情報を読み込み中...</div>
+            </div>
+        </section>
+
+        <main class="timeline" role="main" aria-label="旅行スケジュール">
+            <!-- 横浜駅集合 -->
+            <article class="timeline-item" aria-labelledby="meeting-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="12:00">
+                        <span class="time-single">12:00</span>
+                    </time>
+                    <h2 class="activity" id="meeting-heading">
+                        🚉 横浜駅集合（きた東口A付近）
+                        <span class="location">横浜駅</span>
+                    </h2>
+                    <div class="description">
+                        集合後、東急東横線で白楽へ移動。
+                    </div>
+                    <div class="notes">
+                        <strong>📍 集合場所:</strong> きた東口A付近で集合。
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E6%A8%AA%E6%B5%9C%E9%A7%85&destination=%E7%99%BD%E6%A5%BD%E9%A7%85&travelmode=transit" target="_blank" rel="noopener noreferrer" class="link">
+                            🚃 乗換（Google）
+                        </a>
+                        <a href="https://www.navitime.co.jp/transfer/searchlist?orvStationName=%E6%A8%AA%E6%B5%9C&dnvStationName=%E7%99%BD%E6%A5%BD&month=202508&day=30&hour=12&minute=05" target="_blank" rel="noopener noreferrer" class="link">
+                            🚃 乗換（NAVITIME）
+                        </a>
+                    </div>
+                    <div id="weather-12:00" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- ラーメン 末廣家 -->
+            <article class="timeline-item food" aria-labelledby="suehiroya-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="12:25">
+                        <span class="time-range">12:25–13:05</span>
+                        <span class="duration">40分</span>
+                    </time>
+                    <h2 class="activity" id="suehiroya-heading">
+                        🍜 ラーメン 末廣家（白楽）で昼食
+                        <span class="location">白楽駅から徒歩約8分</span>
+                    </h2>
+                    <div class="description">
+                        吉村家直系の王道家系ラーメン店。行列が出るため早めの到着推奨。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 費用:</strong> 1,000円前後　<strong>⚠️ 営業:</strong> 火–土 11:00–21:00、日月休<br>
+                        <strong>⚠️ 予約:</strong> 予約不可
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E7%99%BD%E6%A5%BD%E9%A7%85&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8C%BA%E5%85%AD%E8%A7%92%E6%A9%8B1-14-7&travelmode=walking" target="_blank" rel="noopener noreferrer" class="link">
+                            🚶 徒歩（Google）
+                        </a>
+                        <a href="https://www.navitime.co.jp/route/poi?start=%E7%99%BD%E6%A5%BD%E9%A7%85&goal=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E6%9C%AB%E5%BB%A3%E5%AE%B6%EF%BC%88%E7%99%BD%E6%A5%BD%EF%BC%89" target="_blank" rel="noopener noreferrer" class="link">
+                             徒歩（NAVITIME）
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E6%9C%AB%E5%BB%A3%E5%AE%B6%EF%BC%88%E7%99%BD%E6%A5%BD%EF%BC%89" target="_blank" rel="noopener noreferrer" class="link">
+                            📍 店舗地図（Google）
+                        </a>
+                    </div>
+                    <div id="weather-12:25" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- 移動：白楽→横浜→B-PUMP -->
+            <article class="timeline-item transport" aria-labelledby="transport1-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="13:05">
+                        <span class="time-range">13:05–13:30</span>
+                        <span class="duration">25分</span>
+                    </time>
+                    <h2 class="activity" id="transport1-heading">
+                        🚃 白楽 → 横浜（東横線）→ B-PUMP YOKOHAMA
+                        <span class="location">横浜駅から徒歩10分前後</span>
+                    </h2>
+                    <div class="description">
+                        白楽から横浜駅へ戻り、徒歩でB-PUMP YOKOHAMAへ。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 運賃:</strong> IC約140円　<strong>🚶 徒歩:</strong> 横浜駅→B-PUMP 約10分
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E7%99%BD%E6%A5%BD%E9%A7%85&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%B9%B3%E6%B2%BC1-8-1&travelmode=transit" target="_blank" rel="noopener noreferrer" class="link">
+                            🚃 乗換（Google）
+                        </a>
+                        <a href="https://www.navitime.co.jp/transfer/searchlist?orvStationName=%E7%99%BD%E6%A5%BD&dnvStationName=%E6%A8%AA%E6%B5%9C&month=202508&day=30&hour=13&minute=05" target="_blank" rel="noopener noreferrer" class="link">
+                            � 乗換（NAVITIME）
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E6%A8%AA%E6%B5%9C%E9%A7%85&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%B9%B3%E6%B2%BC1-8-1&travelmode=walking" target="_blank" rel="noopener noreferrer" class="link">
+                            � 徒歩（Google｜横浜駅→B-PUMP）
+                        </a>
+                    </div>
+                    <div id="weather-13:05" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- B-PUMP YOKOHAMA ボルダリング -->
+            <article class="timeline-item event" aria-labelledby="bpump-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="13:30">
+                        <span class="time-range">13:30–15:30</span>
+                        <span class="duration">2時間</span>
+                    </time>
+                    <h2 class="activity event" id="bpump-heading">
+                        🧗 B-PUMP YOKOHAMA でボルダリング
+                        <span class="location">神奈川県横浜市西区平沼1-8-1</span>
+                    </h2>
+                    <div class="description">
+                        更衣・受付時間を含む。土・祝は11:00–21:00営業。初心者向けコースも豊富。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 費用:</strong> 一般2,200円+レンタル（シューズ400円）　<strong>⚠️ 営業:</strong> 土・祝 11:00–21:00<br>
+                        <strong>⚠️ 予約:</strong> 予約不要（混雑時は待機の場合あり）
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/search/?api=1&query=B-PUMP%20YOKOHAMA" target="_blank" rel="noopener noreferrer" class="link">
+                            � 施設地図（Google）
+                        </a>
+                    </div>
+                    <div id="weather-13:30" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- 横浜ベイクォーター ランタンナイト -->
+            <article class="timeline-item event" aria-labelledby="lantern-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="15:30">
+                        <span class="time-range">15:30–17:30</span>
+                        <span class="duration">2時間（寄り道）</span>
+                    </time>
+                    <h2 class="activity event" id="lantern-heading">
+                        🏮 横浜ベイクォーターで横浜ランタンナイト
+                        <span class="location">神奈川県横浜市神奈川区金港町1-10</span>
+                    </h2>
+                    <div class="description">
+                        点灯は17:00。B-PUMPから徒歩移動後、カフェ等で時間調整→17:00以降に観覧。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 費用:</strong> 無料（カフェ代別）　<strong>�️ 点灯時間:</strong> 17:00～<br>
+                        <strong>⚠️ 天候:</strong> 荒天時は中止の場合あり
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%B9%B3%E6%B2%BC1-8-1&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8C%BA%E9%87%91%E6%B8%AF%E7%94%BA1-10&travelmode=walking" target="_blank" rel="noopener noreferrer" class="link">
+                            � 徒歩（Google｜B-PUMP→ベイクォーター）
+                        </a>
+                        <a href="https://www.navitime.co.jp/route/poi?start=B-PUMP%20YOKOHAMA&goal=%E6%A8%AA%E6%B5%9C%E3%83%99%E3%82%A4%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC" target="_blank" rel="noopener noreferrer" class="link">
+                            🚶 徒歩（NAVITIME）
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=%E6%A8%AA%E6%B5%9C%E3%83%99%E3%82%A4%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC" target="_blank" rel="noopener noreferrer" class="link">
+                            📍 会場地図（Google）
+                        </a>
+                    </div>
+                    <div id="weather-15:30" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- 移動：横浜→新杉田 -->
+            <article class="timeline-item transport" aria-labelledby="transport2-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="17:30">
+                        <span class="time-range">17:30–17:50</span>
+                        <span class="duration">20分</span>
+                    </time>
+                    <h2 class="activity" id="transport2-heading">
+                        🚃 横浜 → 新杉田（JR根岸線）
+                        <span class="location">東口からJRへ移動</span>
+                    </h2>
+                    <div class="description">
+                        横浜駅東口からJR根岸線で新杉田駅へ。夕食の杉田家本店へ向かう。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 運賃:</strong> IC約230円　<strong>🚶 徒歩:</strong> 新杉田駅→杉田家本店 3〜4分
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E6%A8%AA%E6%B5%9C%E9%A7%85&destination=%E6%96%B0%E6%9D%89%E7%94%B0%E9%A7%85&travelmode=transit" target="_blank" rel="noopener noreferrer" class="link">
+                            🚃 乗換（Google）
+                        </a>
+                        <a href="https://www.navitime.co.jp/transfer/searchlist?orvStationName=%E6%A8%AA%E6%B5%9C&dnvStationName=%E6%96%B0%E6%9D%89%E7%94%B0&month=202508&day=30&hour=17&minute=30" target="_blank" rel="noopener noreferrer" class="link">
+                            � 乗換（NAVITIME）
+                        </a>
+                    </div>
+                    <div id="weather-17:30" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- ラーメン 杉田家 本店 -->
+            <article class="timeline-item food" aria-labelledby="sugitaya-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="17:50">
+                        <span class="time-range">17:50–18:30</span>
+                        <span class="duration">40分</span>
+                    </time>
+                    <h2 class="activity" id="sugitaya-heading">
+                        🍜 ラーメン 杉田家 本店（新杉田）で夕食
+                        <span class="location">新杉田駅から徒歩3〜4分</span>
+                    </h2>
+                    <div class="description">
+                        家系総本山吉村家直系1号店での夕食。土曜は〜22:00（LO21:30）営業。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 費用:</strong> 1,000円前後　<strong>⚠️ 営業:</strong> 土曜 5:00–22:00（L.O.21:30）<br>
+                        <strong>⚠️ 予約:</strong> 予約不可
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E6%96%B0%E6%9D%89%E7%94%B0%E9%A7%85&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%A3%AF%E5%AD%90%E5%8C%BA%E6%96%B0%E6%9D%89%E7%94%B0%E7%94%BA3-5&travelmode=walking" target="_blank" rel="noopener noreferrer" class="link">
+                            🚶 徒歩（Google）
+                        </a>
+                        <a href="https://www.navitime.co.jp/route/poi?start=%E6%96%B0%E6%9D%89%E7%94%B0%E9%A7%85&goal=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E6%9D%89%E7%94%B0%E5%AE%B6%20%E6%9C%AC%E5%BA%97%EF%BC%88%E6%96%B0%E6%9D%89%E7%94%B0%EF%BC%89" target="_blank" rel="noopener noreferrer" class="link">
+                            🚶 徒歩（NAVITIME）
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E6%9D%89%E7%94%B0%E5%AE%B6%20%E6%9C%AC%E5%BA%97%EF%BC%88%E6%96%B0%E6%9D%89%E7%94%B0%EF%BC%89" target="_blank" rel="noopener noreferrer" class="link">
+                            📍 店舗地図（Google）
+                        </a>
+                    </div>
+                    <div id="weather-17:50" class="event-weather"></div>
+                </div>
+            </article>
+
+            <!-- オプション：金沢まつり花火・屋台 -->
+            <article class="timeline-item event" aria-labelledby="fireworks-heading">
+                <div class="timeline-card">
+                    <time class="time" datetime="18:30">
+                        <span class="time-range">18:30–20:00</span>
+                        <span class="duration">90分（オプション）</span>
+                    </time>
+                    <h2 class="activity event" id="fireworks-heading">
+                        🎆 金沢まつり花火・屋台へショートトリップ
+                        <span class="location">海の公園（花火会場）</span>
+                    </h2>
+                    <div class="description">
+                        19:00–20:00に海の公園で花火。雰囲気だけ楽しむ場合は屋台（12:00–20:00）も可。
+                    </div>
+                    <div class="notes">
+                        <strong>💰 費用:</strong> 無料（屋台代別）　<strong>🎆 花火時間:</strong> 19:00–20:00<br>
+                        <strong>🍭 屋台時間:</strong> 12:00–20:00　<strong>⚠️ 天候:</strong> 荒天中止あり
+                    </div>
+                    <div class="links">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E6%96%B0%E6%9D%89%E7%94%B0%E9%A7%85&destination=%E6%B5%B7%E3%81%AE%E5%85%AC%E5%9C%92%E5%8D%97%E5%8F%A3%E9%A7%85%EF%BC%88%E3%82%B7%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%EF%BC%89&travelmode=transit" target="_blank" rel="noopener noreferrer" class="link">
+                            � 乗換（Google｜新杉田→海の公園南口）
+                        </a>
+                        <a href="https://www.navitime.co.jp/transfer/searchlist?orvStationName=%E6%96%B0%E6%9D%89%E7%94%B0&dnvStationName=%E6%B5%B7%E3%81%AE%E5%85%AC%E5%9C%92%E5%8D%97%E5%8F%A3&month=202508&day=30&hour=18&minute=30" target="_blank" rel="noopener noreferrer" class="link">
+                            � 乗換（NAVITIME）
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=%E6%B5%B7%E3%81%AE%E5%85%AC%E5%9C%92%E5%8D%97%E5%8F%A3%E9%A7%85%EF%BC%88%E3%82%B7%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%EF%BC%89&destination=%E6%B5%B7%E3%81%AE%E5%85%AC%E5%9C%92%EF%BC%88%E8%8A%B1%E7%81%AB%E4%BC%9A%E5%A0%B4%EF%BC%89&travelmode=walking" target="_blank" rel="noopener noreferrer" class="link">
+                            � 徒歩（Google｜駅→会場）
+                        </a>
+                    </div>
+                    <div id="weather-18:30" class="event-weather"></div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        // 天気予報API統合（イベント別対応）
+        async function fetchWeatherData() {
+            const weatherContainer = document.getElementById('weatherContainer');
+            
+            try {
+                // 横浜・みなとみらいエリアの座標
+                const lat = 35.4628;  // みなとみらい地区付近
+                const lon = 139.6200;
+                const date = '2025-08-30';
+                
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relative_humidity_2m,weather_code,precipitation_probability&timezone=Asia/Tokyo&start_date=${date}&end_date=${date}`;
+                
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // 全体的な天気概要を表示
+                displayOverallWeather(data, weatherContainer);
+                
+                // 各イベントごとの天気を表示
+                displayEventWeather(data);
+                
+            } catch (error) {
+                console.error('天気データの取得に失敗:', error);
+                weatherContainer.innerHTML = `
+                    <div class="weather-error">
+                        ⚠️ 天気情報の取得に失敗しました<br>
+                        <small>ネットワーク接続をご確認ください</small>
+                    </div>
+                `;
+                
+                // エラー時でも各イベントの天気欄に代替メッセージを表示
+                displayFallbackEventWeather();
+            }
+        }
+        
+        // 全体的な天気概要を表示
+        function displayOverallWeather(data, container) {
+            // 主要な時間帯の天気を表示（10:00, 14:00, 18:00）
+            const targetHours = [10, 14, 18];
+            const weatherHTML = targetHours.map(hour => {
+                const weatherInfo = getWeatherForHour(data, hour);
+                if (!weatherInfo) return '';
+                
+                return `
+                    <div class="weather-item">
+                        <div class="weather-time">${hour.toString().padStart(2, '0')}:00</div>
+                        <div class="weather-icon">${weatherInfo.icon}</div>
+                        <div class="weather-temp">${weatherInfo.temp}°C</div>
+                        <div class="weather-desc">${weatherInfo.description}</div>
+                    </div>
+                `;
+            }).filter(html => html).join('');
+            
+            container.innerHTML = weatherHTML || `
+                <div class="weather-error">天気データが取得できませんでした</div>
+            `;
+        }
+        
+        // 各イベントごとの天気を表示
+        function displayEventWeather(data) {
+            const eventTimes = ['12:00', '12:25', '13:05', '13:30', '15:30', '17:30', '17:50', '18:30'];
+            
+            eventTimes.forEach(timeStr => {
+                const hour = parseInt(timeStr.split(':')[0]);
+                const minute = parseInt(timeStr.split(':')[1]);
+                const weatherInfo = getWeatherForHour(data, hour);
+                const weatherElement = document.getElementById(`weather-${timeStr}`);
+                
+                if (weatherElement && weatherInfo) {
+                    weatherElement.innerHTML = `
+                        <div class="weather-icon">${weatherInfo.icon}</div>
+                        <div class="weather-info">
+                            <div class="weather-temp">${weatherInfo.temp}°C</div>
+                            <div>${weatherInfo.description}</div>
+                            ${weatherInfo.rain > 0 ? `<div>☔ 降水確率: ${weatherInfo.rain}%</div>` : ''}
+                        </div>
+                    `;
+                }
+            });
+        }
+        
+        // エラー時の代替天気表示
+        function displayFallbackEventWeather() {
+            const eventTimes = ['12:00', '12:25', '13:05', '13:30', '15:30', '17:30', '17:50', '18:30'];
+            
+            eventTimes.forEach(timeStr => {
+                const weatherElement = document.getElementById(`weather-${timeStr}`);
+                if (weatherElement) {
+                    weatherElement.innerHTML = `
+                        <div class="weather-icon">🌤️</div>
+                        <div class="weather-info">
+                            <div>天気情報を確認できませんでした</div>
+                        </div>
+                    `;
+                }
+            });
+        }
+        
+        // 指定時間の天気データを取得
+        function getWeatherForHour(data, targetHour) {
+            if (!data.hourly || !data.hourly.time) return null;
+            
+            const index = data.hourly.time.findIndex(time => {
+                const hourDate = new Date(time);
+                return hourDate.getHours() === targetHour;
+            });
+            
+            if (index === -1) return null;
+            
+            const temp = Math.round(data.hourly.temperature_2m[index]);
+            const weatherCode = data.hourly.weather_code[index];
+            const rain = data.hourly.precipitation_probability[index] || 0;
+            const weatherInfo = getWeatherInfo(weatherCode);
+            
+            return {
+                temp: temp,
+                icon: weatherInfo.icon,
+                description: weatherInfo.description,
+                rain: rain
+            };
+        }
+        
+        // WMO天気コードから日本語の天気情報を取得
+        function getWeatherInfo(code) {
+            const weatherMap = {
+                0: { icon: '☀️', description: '快晴' },
+                1: { icon: '🌤️', description: 'ほぼ晴れ' },
+                2: { icon: '⛅', description: '一部曇り' },
+                3: { icon: '☁️', description: '曇り' },
+                45: { icon: '🌫️', description: '霧' },
+                48: { icon: '🌫️', description: '着氷霧' },
+                51: { icon: '🌦️', description: '小雨' },
+                53: { icon: '🌧️', description: '中雨' },
+                55: { icon: '🌧️', description: '大雨' },
+                61: { icon: '🌧️', description: '小雨' },
+                63: { icon: '🌧️', description: '中雨' },
+                65: { icon: '🌧️', description: '大雨' },
+                80: { icon: '🌦️', description: 'にわか雨' },
+                81: { icon: '🌧️', description: '激しいにわか雨' },
+                95: { icon: '⛈️', description: '雷雨' }
+            };
+            
+            return weatherMap[code] || { icon: '❓', description: '不明' };
+        }
+        
+        // アクセシビリティとユーザビリティの向上
+        document.addEventListener('DOMContentLoaded', function() {
+            // 天気データの取得
+            fetchWeatherData();
+            
+            // 外部リンクに安全性とアクセシビリティの属性を追加
+            const externalLinks = document.querySelectorAll('a[href^="http"]');
+            externalLinks.forEach(link => {
+                // セキュリティ属性
+                link.setAttribute('rel', 'noopener noreferrer');
+                
+                // アクセシビリティ - 外部リンクであることを明示
+                const currentAriaLabel = link.getAttribute('aria-label') || link.textContent;
+                link.setAttribute('aria-label', currentAriaLabel + '（外部サイト）');
+            });
+
+            // キーボードナビゲーション支援
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    document.body.classList.add('keyboard-navigation');
+                }
+            });
+
+            document.addEventListener('mousedown', function() {
+                document.body.classList.remove('keyboard-navigation');
+            });
+
+            // スムーズスクロール実装
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                item.setAttribute('tabindex', '0');
+                
+                // フォーカス時のスクロール調整
+                item.addEventListener('focus', function() {
+                    this.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                });
+            });
+
+            // PWA対応の基本設定
+            if ('serviceWorker' in navigator) {
+                console.log('Service Worker対応ブラウザ');
+            }
+
+            // オフライン対応の状態表示
+            window.addEventListener('online', function() {
+                console.log('オンライン状態に復帰');
+                fetchWeatherData(); // オンライン復帰時に天気データを再取得
+            });
+
+            window.addEventListener('offline', function() {
+                console.log('オフライン状態');
+            });
+        });
+    </script>
+</body>
+</html>
